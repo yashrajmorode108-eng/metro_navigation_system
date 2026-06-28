@@ -98,11 +98,11 @@ void NagpurMetroSystem::displayStations() {
     cout << "============================================\n";
     cout << "[ORANGE LINE]:\n";
     for(const auto& pair : stationLines) {
-        if(pair.second == "Orange" || pair.second == "Interchange") cout << "  • " << pair.first << "\n";
+        if(pair.second == "Orange" || pair.second == "Interchange") cout << "  - " << pair.first << "\n";
     }
     cout << "\n[AQUA LINE]:\n";
     for(const auto& pair : stationLines) {
-        if(pair.second == "Aqua" || pair.second == "Interchange") cout << "  • " << pair.first << "\n";
+        if(pair.second == "Aqua" || pair.second == "Interchange") cout << "  - " << pair.first << "\n";
     }
     cout << "============================================\n";
 }
