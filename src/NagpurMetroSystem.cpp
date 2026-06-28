@@ -179,13 +179,13 @@ void NagpurMetroSystem::displayRouteResults(const string& src, const string& des
     cout << "\n============================================\n";
     cout << "             ROUTE INFORMATION              \n";
     cout << "============================================\n";
-    cout << "▶ Source:      " << src << "\n";
-    cout << "▶ Destination: " << dest << "\n";
+    cout << "-> Source:      " << src << "\n";
+    cout << "-> Destination: " << dest << "\n";
     cout << "--------------------------------------------\n";
     cout << "Total Stations: " << path.size() << "\n";
     cout << "Total Distance: " << fixed << setprecision(2) << totalDist << " km\n";
     cout << "Estimated Time: " << fixed << setprecision(1) << totalTime << " mins\n";
-    cout << "Ticket Fare:    ₹" << calculateFare(totalDist) << "\n";
+    cout << "Ticket Fare:    Rs." << calculateFare(totalDist) << "\n";
     cout << "--------------------------------------------\n";
     cout << "ROUTE PATH:\n";
     
@@ -194,10 +194,10 @@ void NagpurMetroSystem::displayRouteResults(const string& src, const string& des
         if (i < path.size() - 1) {
             if (path[i] == "Sitabuldi" && i > 0 && i < path.size() - 1) {
                 if (stationLines[path[i-1]] != stationLines[path[i+1]]) {
-                    cout << " \n  [🔄 INTERCHANGE - Switch Platforms] \n";
+                    cout << " \n  [--- INTERCHANGE - Switch Platforms] --- \n";
                 }
             }
-            cout << "  ➔  \n";
+            cout << "  -->  \n";
         }
     }
     cout << "\n============================================\n";

@@ -203,7 +203,7 @@ Run the executable
 ### Windows
 
 ```bash
-metro.exe
+./metro.exe
 ```
 
 ### Linux / macOS
